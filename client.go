@@ -21,8 +21,9 @@ type Client struct {
 }
 
 // NewClient creates new OpenAI API client.
-func NewClient(authToken string) *Client {
-	config := DefaultConfig(authToken)
+// NewClient creates new OpenAI API client.
+func NewClient(authToken,base_url string) *Client {
+	config := DefaultConfig(authToken,base_url)
 	return NewClientWithConfig(config)
 }
 
